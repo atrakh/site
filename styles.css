@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Roboto";
+  src: URL("assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@keyframes createBox {
+  from {
+    max-height: 0px;
+    width: 0px;
+  }
+  to {
+    max-height: 100%;
+    width: 750px;
+  }
+}
+
+@keyframes reveal {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typewriter {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 215, 89);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+button,
+button:focus {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 350px;
+  margin-top: -375px;
+  margin-left: -375px;
+}
+
+h2 {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 215, 89);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  text-align: center;
+  visibility: hidden;
+  animation: reveal 0s 1.5s forwards, typing 1.5s 1.5s steps(40, end),
+    typewriter 1.5s step-end infinite;
+  max-width: fit-content;
+}
+
+h3 {
+  text-align: center;
+  min-height: 22px;
+}
+
+#headshot {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  visibility: hidden;
+  animation: reveal 0s 0.75s forwards, bounce 0.5s 0.75s;
+}
+
+#headshot img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+#contact {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  animation: reveal 0s 0.75s forwards;
+  visibility: hidden;
+}
+
+#container {
+  position: relative;
+  margin: 20px auto;
+  padding-bottom: 20%;
+  border: 2px solid white;
+  animation: createBox 1s;
+  height: inherit;
+  width: inherit;
+}
+
+#contents {
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  animation: reveal 0s 0.75s forwards;
+  visibility: hidden;
+}
+
+#container:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  border-radius: 25% 0;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+}
