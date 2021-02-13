@@ -68,16 +68,6 @@ body {
   margin: 0;
 }
 
-button,
-button:focus {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -105,11 +95,6 @@ h2 {
   animation: reveal 0s 1.5s forwards, typing 1.5s 1.5s steps(40, end),
     typewriter 1.5s step-end infinite;
   max-width: fit-content;
-}
-
-h3 {
-  text-align: center;
-  min-height: 22px;
 }
 
 #headshot {
